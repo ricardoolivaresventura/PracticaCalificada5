@@ -76,11 +76,13 @@ El proceso es así:
 - Vamos a crear un Dockerfile en el directorio raíz del proyecto calculadora (https://github.com/ricardoolivaresventura/calculador)
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/add-dockerfile2.PNG "")
 
-- Ahora compilamos y creamos la imagen
+- Ahora compilamos con el comando ./gradlew build
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/gradlew-build.PNG "")
 
+- Creamos la imagen
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/build-calculador.PNG "")
 
+-Y lo subimos al repositorio donde tenemos el proyecto de calculador de la actividad pasada
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/repository-dockerfile.PNG "")
  
 #### Agregar la compilación de Docker al pipeline
@@ -96,4 +98,30 @@ Para realizar las pruebas de aceptación, primero debemos implementar la aplicac
 
 #### Adición de una implementación provisional al pipeline
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/deploy-stg.PNG "")
+
+#### Agregar una prueba de aceptación al pipeline
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/acceptante-test.PNG "")
  
+#### Agregar una etapa Acceptance test
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/acceptante-test-jenkinsfile.PNG "")
+ 
+#### Adición de un entorno de etapa de limpieza
+Ahora agregaremos una sentencia de que SIEMPRE luego de ejecutar toda la construcción procederemos a limpiar el entorno de pruebas, para ello usaremos "post" y "always"
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/add-always.PNG "")
+ 
+#### Escribir pruebas orientadas al usuario
+Para definir lo que tendrá un software, se necesita la opinión de los usuarios y a su vez a los desarrolladores que son los que llevarán dichos requerimientos a código. Por ello, necesitamos un lenguaje común para colaborar, en este caso utilizaremos cucumber para crear pruebas de aceptación
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/add-feature.PNG "")
+ 
+ #### Creación de definiciones de pasos
+ - En este paso crearemos la clase StepDefinitions usando cucumber
+ ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/step-definitions.PNG "")
+ 
+ #### Ejecución de una prueba de aceptación automatizada
+ - Agregamos las librerías en el archivo build.gradle y además agregaremos un código que dividirá las pruebas en pruebas unitarias y pruebas de aceptación
+ ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/add-cucumber.PNG "")
+
+- Ahora, agregaremos un JUnit Test Runner llamado AcceptanceTest.java
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/test-runner.PNG "")
+ 
+
