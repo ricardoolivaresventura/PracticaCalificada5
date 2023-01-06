@@ -14,3 +14,11 @@ Es una aplicación de servidor sin estado (stateless), que nos permitirá public
 El repositorio de artefactos se dedica a almacenar artefactos binarios de software. Este juega un papel muy importante en el proceso de CD porque nos permitirá garantizar el uso del mismo binario en todos el proceso del pipeline
 
 ### Instalación de un registro Docker
+Tenemos dos opciones disponibles, un Docker Registry basado en la nube y un Docker registry hospedado
+
+#### Docker Registry en la nube
+El beneficio de utilizar esta opción, es que no necesitamos mantener nada por nuestra cuenta, ya que, todo es mantenido por el servicio en la nube. El más popular es Docker Hub.
+
+#### Docker Hub
+Lo único que necesitamos para utilizar Docker Hub es crear una cuenta:
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/docker_hub_captura.PNG "docker hub account")
