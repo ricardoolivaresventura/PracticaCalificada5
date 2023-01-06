@@ -157,8 +157,15 @@ Hay varias formas de configurar un servidor de Kubernetes, pero si somos complet
 #### Entorno local
 Existen algunas herramientas que pueden simplificar su configuración de desarrollo local. Repasamos las opciones que tiene (Docker desktop, kind y minikube)
 
-- En mi caso, yo estoy en Windows y tengo instalado Docker Desktop, por lo tanto, bastará con habilitad la casilla Kubernetes en la interfaz de usuario
+- En mi caso, yo estoy en Windows y tengo instalado Docker Desktop, por lo tanto, bastará con habilitada la casilla Kubernetes en la interfaz de usuario
  ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/enable-kubernetes.PNG "")
+- Luego, podemos ver que kubernetes está corriendo
+ ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/kubernetes-running.PNG "")
+
+#### Verificación de la configuración de Kubernetes
+- Independientemente de la instalación de kubernetes que hayamos elegido, deberíamos poder ver la información del clúster con el comando kubectl cluster-info
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/kubernetes-running-2.PNG "")
+ 
 
  
  
