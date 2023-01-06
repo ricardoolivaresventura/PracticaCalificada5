@@ -125,4 +125,40 @@ Para definir lo que tendrá un software, se necesita la opinión de los usuarios
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/test-runner.PNG "")
  
 
- ## Actividad 24
+## Actividad 24
+En esta actividad, veremos cómo podemos pasar de un solo host Docker a un grupo de máquinas
+ 
+### Introducción a la clustering de servidores
+- Un clúster es un conjunto de computadoras conectadas que se gestionan juntos y funcionan de tal manera que es equivalente a usar un solo sistema.
+
+ - Mientras que los nodos se encargan de ejecutar las aplicaciones, el maestro es el responsable de delegar las tareas, del proceso de orquestación, el descubrimiento de servicios, equilibrio de carga y detección de fallas de nodos
+ 
+ ### Introducción a Kubernetes
+ Kubernetes es un sistema de administración de clústeres de código abierto. Entre sus principales características, tenemos a los siguientes:
+- Equilibrio de contenedores
+- Equilibrio de carga de tráfico
+- Escalamiento horizontal dinámico
+- Recuperación de fallas
+- Actualizaciones continuas
+- Orquestación de almacenamiento
+- Detección de servicios
+- Ejecutar en todas partes
+ 
+ ### Instalación de Kubernetes
+ Al igual que Docker, Kubernetes también cuenta con un cliente (kubectl) y un servidor.
+ 
+ #### Cliente de Kubernetes
+ - Primero visitamos la página oficial de kubernetes para instalarlo de acuerdo al sistema operativo, en mi caso es Windows. Instalaremos kubectl con chocolatey
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/kubernetes-version.PNG "")
+
+#### Servidor de Kubernetes
+Hay varias formas de configurar un servidor de Kubernetes, pero si somos completamente nuevos en Kubernetes, entonces se recomienda comenzar desde un entorno local
+ 
+#### Entorno local
+Existen algunas herramientas que pueden simplificar su configuración de desarrollo local. Repasamos las opciones que tiene (Docker desktop, kind y minikube)
+
+- En mi caso, yo estoy en Windows y tengo instalado Docker Desktop, por lo tanto, bastará con habilitad la casilla Kubernetes en la interfaz de usuario
+ ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/enable-kubernetes.PNG "")
+
+ 
+ 
