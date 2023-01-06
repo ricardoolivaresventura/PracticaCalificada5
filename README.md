@@ -74,4 +74,12 @@ El proceso es así:
 ### La etapa de construcción de Docker
 #### Agregar un archivo Docker
 - Vamos a crear un Dockerfile en el directorio raíz del proyecto calculadora
-![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/add-dockerfile.PNG "")
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/add-dockerfile2.PNG "")
+
+- Ahora compilamos y creamos la imagen
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/gradlew-build.PNG "")
+
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/build-calculador.PNG "")
+
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/repository-dockerfile.PNG "")
+
