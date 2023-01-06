@@ -82,4 +82,10 @@ El proceso es así:
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/build-calculador.PNG "")
 
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/repository-dockerfile.PNG "")
+ 
+#### Agregar la compilación de Docker al pipeline
+- El paso final que debemos realizar es agregar la etapa Docker build al Jenkinsfile:
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/jenkinsfile.PNG "")
 
+- CUando la imagen esté lista, podemos almacenarla en el registro, para ello agregamos la etapa Docker push
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/jenkinsfile-dockerpush.PNG "")
