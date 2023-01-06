@@ -166,6 +166,24 @@ Existen algunas herramientas que pueden simplificar su configuración de desarro
 - Independientemente de la instalación de kubernetes que hayamos elegido, deberíamos poder ver la información del clúster con el comando kubectl cluster-info
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/kubernetes-running-2.PNG "")
  
+#### Uso de Kubernetes
+Haremos uso de la imagen de Docker que creamos en actividades anteriores, "calculador"
 
+### Implementación de una aplicación
+- Para iniciar un contenedor Docker en Kubernetes, debemos preparar una configuración de implementación como un archivo YAML
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/deploymentyaml.PNG "")
+
+- En esta configuración de YAML, hemos definido lo sgte:
+1. Hemos definido un recurso de Kubernetes del tipo Deployment de la versión de la API de
+Kubernetes apps/v1.
+2. El nombre de implementación único es calculador-deployment.
+3. Hemos definido que debe haber exactamente 3 Pods iguales creados.
+4. selector define cómo Deployment encuentra Pods para administrar, en este caso, solo por la
+etiqueta.
+5. template define la especificación para cada Pod creado.
+6. Cada Pod está etiquetado con la aplicación: calculador.
+7. Cada Pod contiene un contenedor Docker llamado calculador.
+8. Se creó un contenedor Docker a partir de la imagen llamado checha/calculador.
+9. El Pod expone el puerto del contenedor 8080.
  
- 
+- Para instalar la implementación debemos ejecutar el sgte comand "kubectl apply -f deployment.yaml"
