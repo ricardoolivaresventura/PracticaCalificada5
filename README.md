@@ -73,7 +73,7 @@ El proceso es así:
 
 ### La etapa de construcción de Docker
 #### Agregar un archivo Docker
-- Vamos a crear un Dockerfile en el directorio raíz del proyecto calculadora
+- Vamos a crear un Dockerfile en el directorio raíz del proyecto calculadora (https://github.com/ricardoolivaresventura/calculador)
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/add-dockerfile2.PNG "")
 
 - Ahora compilamos y creamos la imagen
@@ -87,5 +87,13 @@ El proceso es así:
 - El paso final que debemos realizar es agregar la etapa Docker build al Jenkinsfile:
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/jenkinsfile.PNG "")
 
-- CUando la imagen esté lista, podemos almacenarla en el registro, para ello agregamos la etapa Docker push
+- Cuando la imagen esté lista, podemos almacenarla en el registro, para ello agregamos la etapa Docker push
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/jenkinsfile-dockerpush.PNG "")
+ 
+ 
+#### La etapa de prueba de aceptación
+Para realizar las pruebas de aceptación, primero debemos implementar la aplicación en el entorno de prueba y luego ejecutar el conjunto de pruebas de aceptación
+
+#### Adición de una implementación provisional al pipeline
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/deploy-stg.PNG "")
+ 
