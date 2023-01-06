@@ -61,4 +61,17 @@ Cuando nuestro registro esté configurado, podemos trabajar con él en tres etap
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/pull_docker.PNG "")
  
  
+### Pruebas de aceptación en el pipeline de Jenkins
+El proceso es así:
+1. El desarrollador envía un cambio de código a Github
+2. Jenkins detecta el cambio, activa la compilación y verifica el código actual
+3. Jenkins ejecuta la fase de commit y crea la imagen de Docker
+4. Jenkins envía la imagen al Docker registry
+5. Jenkins ejecuta el contenedor Docker en el entorno de prueba
+6. El host de Docker en el entorno de pruebas debes realizar pull de la imagen del Docker registry
+7. Jenkins ejecuta el conjunto de pruebas de aceptación contra la aplicación que se ejecuta en el entorno de pruebas
 
+### La etapa de construcción de Docker
+#### Agregar un archivo Docker
+- Vamos a crear un Dockerfile en el directorio raíz del proyecto calculadora
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/add-dockerfile.PNG "")
