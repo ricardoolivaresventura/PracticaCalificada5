@@ -125,3 +125,4 @@ Para definir lo que tendrá un software, se necesita la opinión de los usuarios
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/test-runner.PNG "")
  
 
+ ## Actividad 24
