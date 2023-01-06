@@ -22,3 +22,43 @@ El beneficio de utilizar esta opción, es que no necesitamos mantener nada por n
 #### Docker Hub
 Lo único que necesitamos para utilizar Docker Hub es crear una cuenta:
 ![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/docker_hub_captura.PNG "docker hub account")
+
+#### Uso del Docker Registry
+Cuando nuestro registro esté configurado, podemos trabajar con él en tres etapas, de la sgte manera:
+- Construcción de una imagen
+- Realizamos un pushing de la imagen en el registro (Subimos la imagen)
+- Realizamos un pulling de la imagen del registro (Bajar la imagen del Docker Hub)
+
+#### Construyendo la imagen
+- Primero crearemos un directorio llamado "trabajando con docker registry" y dentro de este colocaremos el Dockerfile
+
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/trabajando_con_docker_registry.PNG "")
+
+- Crear el archivo Dockerfile, tomar como imagen base Ubuntu e instalar el intérprete de Python
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/nano_Dockerfile.PNG "")
+
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/nano_Dockerfile2.PNG "")
+
+- Ahora construimos la imagen con el comando "docker build -t ubuntu_with_python . "
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/build_image_1.PNG "")
+
+#### Realizando un pushing de la imagen en el registor
+- Para enviar la imagen creada, debemos etiquetarla de acuerdo con una convención de nomenclatura <registry_address>/<image_name>:<tag>. Para nuestro caso, que usaremos Docker Hub, el registry_address debe ser nuestro nombre de usuario de Docker Hub
+- Etiquetemos la imagen para usar Docker Hub, usando el sgte comando:
+"docker tab ubuntu_with_python rlov/ubuntu_with_python:1
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/tag_rlovuni.PNG "")
+ 
+- Ahora, podemos almacenar la imagen en el registro usando el comando push, de la sgte manera:
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/push_docker.PNG "")
+  
+- Y podemos verificarlo en la interfaz web de Docker Hub
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/docker_hub_image.PNG "")
+  
+#### Realizamos un pulling de la imagen del registro
+- Eliminamos la imagen localmente
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/delete_local_image.PNG "")
+- Recuperamos la imagen del registro
+![Alt text](https://raw.githubusercontent.com/ricardoolivaresventura/PracticaCalificada5/main/pull_docker.PNG "")
+ 
+ 
+
